@@ -14,6 +14,7 @@ import History from "./screens/History";
 import Staff from "./screens/Staff";
 import Admin from "./screens/Admin";
 import Dummy from "./data/test";
+import login from "./screens/Login";
 // import Detail from "./screens/Detail";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -50,23 +51,24 @@ const HomeNonStack = () => {
         }}
       />
       <Tab.Screen
-      name="Staff"
-      component={Staff}
-      options={{
-        tabBarIcon: ({ color, size }) => {
-          return <Ionicons name="ios-earth" size={size} color={color} />;
-        },
-      }}
+        name="Staff"
+        component={Staff}
+        options={{
+          tabBarIcon: ({ color, size }) => {
+            return <Ionicons name="ios-earth" size={size} color={color} />;
+          },
+        }}
       />
       <Tab.Screen
-      name="Admin"
-      component={Admin}
-      options={{
-        tabBarIcon: ({ color, size }) => {
-          return <Ionicons name="ios-earth" size={size} color={color} />;
-        },
-      }}
+        name="Admin"
+        component={Admin}
+        options={{
+          tabBarIcon: ({ color, size }) => {
+            return <Ionicons name="ios-earth" size={size} color={color} />;
+          },
+        }}
       />
+
       {/* <Tab.Screen
       name="Dummy"
       component={Dummy}
@@ -91,10 +93,9 @@ export default function App() {
         <Stack.Screen name="FixForm" component={FixForm} />
         <Stack.Screen name="History" component={History} />
         <Stack.Screen name="Stat" component={Stat} />
-        <Tab.Screen name="Detail" component={Detail}/>
+        <Tab.Screen name="Detail" component={Detail} />
         {/* <Stack.Screen name="Dummy" component={Dummy}/> */}
       </Stack.Navigator>
-      
     </NavigationContainer>
   );
 }

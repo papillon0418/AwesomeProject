@@ -1,4 +1,3 @@
-
 // import {initializeApp} from "firebase/app"
 // import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 
@@ -36,11 +35,11 @@
 
 // export default app;
 
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
-import 'firebase/compat/storage'
-
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
+import "firebase/compat/storage";
+import { GoogleAuthProvider, getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyANuZqGncptsZeWOZMC4j5doYl9FEopFRI",
@@ -49,14 +48,15 @@ const firebaseConfig = {
   storageBucket: "rub-job-ff7a2.appspot.com",
   messagingSenderId: "776672616101",
   appId: "1:776672616101:web:e1c43106e9bb23ab66b74c",
-  measurementId: "G-NS4V07WFXD"
+  measurementId: "G-NS4V07WFXD",
 };
 
-if(!firebase.apps.length){
-    firebase.initializeApp(firebaseConfig);
+// Init
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
 }
-export {firebase};
 
+export { firebase };
 
 // import { initializeApp } from "firebase/app";
 // import { getFirestore } from "firebase/firestore";
@@ -75,7 +75,6 @@ export {firebase};
 
 // // Initialize Firebase
 // const app = initializeApp(firebaseConfig);
-
 
 // // Initialize Cloud Firestore and get a reference to the service
 // export const db = getFirestore(app);

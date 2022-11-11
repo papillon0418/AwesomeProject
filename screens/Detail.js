@@ -23,8 +23,10 @@ const Detail = ({route, navigation,}) => {
   // const dbRef = firebase.firestore().collection('Fix_test');
   const box = Dummy();
   console.log("box == " , box)
-  const dataTask = box.filter((t) => t.id == taskId)
-  console.log("Datatask === ", dataTask[0])
+  // const dataTask = box.filter((t) => t.id == taskId)
+  // console.log("Datatask === ", typeof(dataTask[0]))
+  // console.log("Datatask === ", dataTask[0]["description"])
+
   // setTask(dataTask[0])
   useEffect(() => {
     // setId(taskId);
@@ -43,18 +45,18 @@ const Detail = ({route, navigation,}) => {
     //       url,
     //     });
     //   });
-    //   setUsers(users);
+      setUsers(box);
     //   console.log(
     //     "Data fecth = ",
     //     users
     //   );
-      const dataTask = users.filter((t) => t.id == taskId)
-      setTask(dataTask[0])
-      const tasks = Object.values(dataTask[0]);
-      console.log(
-        "task = ", tasks
-      );
-      console.log(dataTask[0].id)
+      // const dataTask = box.filter((t) => t.id == taskId)
+      // setTask(dataTask[0])
+      // const tasks = Object.values(dataTask[0]);
+      // console.log(
+      //   "task = ", tasks
+      // );
+      console.log(users)
     // //set Task
         
     // });
